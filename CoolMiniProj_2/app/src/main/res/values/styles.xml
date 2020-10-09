@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">#0077c2</item>
+        <item name="colorPrimaryDark">#0077c2</item>
+
+
+        <item name="colorAccent">#ef9a9a</item>
+    </style>
+
+    <style name="AppTheme.Base.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomAlert" parent="Base.Theme.MaterialComponents.Dialog.Alert">
+        <item name="dialogCornerRadius">16dp</item>
+
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme" parent="AppTheme.Base"></style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

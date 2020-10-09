@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_drawer">Search History</string>
+    <string name="books_saved_str">My Library</string>
+    <string name="global_app_title">BookTrotter</string>
+    <string name="searchLabel">Search a Book:</string>
+    <string name="bookEx">Ex: The Lord of the Rings</string>
+    <string name="btnSearch">Search!</string>
+    <string name="first_publi_year_label">First Published:</string>
+</resources>

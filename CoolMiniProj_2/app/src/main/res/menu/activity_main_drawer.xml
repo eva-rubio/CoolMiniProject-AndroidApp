@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- ************************** MENU - - - NAVIGATION VIEW************************************** -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_my_library"
+            android:icon="@drawable/full_heart_same_color"
+            android:title="@string/books_saved_str" />
+        <item
+            android:id="@+id/nav_recent_searches"
+            android:icon="@android:drawable/ic_menu_recent_history"
+            android:title="@string/search_drawer" />
+    </group>
+
+</menu>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+
+
+    <TextView
+        android:id="@+id/search_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/searchLabel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <EditText
+        android:id="@+id/user_input_textField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+
+        android:backgroundTint="@color/greenDarkerThemeColor"
+        android:ems="10"
+        android:hint="@string/bookEx"
+
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textCursorDrawable="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_label"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp"
+        android:onClick="sendSearchText"
+        android:text="@string/btnSearch"
+        app:layout_constraintBaseline_toBaselineOf="@+id/user_input_textField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/user_input_textField" />
+
+    <View
+        android:id="@+id/divider_fromain"
+        android:layout_width="395dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="406dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- **************************************************************************************************************************************       -->
+
+    <android.support.design.card.MaterialCardView
+        android:id="@+id/ideas_material_card"
+        android:layout_width="377dp"
+        android:layout_height="380dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider_fromain">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_matCard_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/label_sectiontwo_uno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11dp"
+                android:text="@string/label_book_ideas_first" />
+
+            <TextView
+                android:id="@+id/label_sectiontwo_dos"
+                android:layout_width="197dp"
+                android:layout_height="39dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="75dp"
+                android:text="@string/label_book_ideas_second"
+                android:textSize="12sp" />
+
+            <!-- (1) ONE'S <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+            <android.support.design.button.MaterialButton
+                android:id="@+id/one_title_btn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="103dp"
+                android:layout_height="46dp"
+                android:layout_above="@+id/two_title_btn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="26dp"
+                android:layout_toEndOf="@+id/one_author_btn"
+                android:elevation="4dp"
+                android:fontFamily="serif"
+                android:onClick="onClick"
+                android:text="@string/janeausten"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                app:backgroundTint="@color/titlesOrangeColor" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/one_author_btn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="116dp"
+                android:layout_height="46dp"
+                android:layout_above="@+id/two_author_btn"
+                android:layout_marginStart="21dp"
+                android:layout_marginBottom="26dp"
+                android:layout_toEndOf="@+id/one_subject_btn"
+                android:elevation="4dp"
+                android:fontFamily="serif"
+                android:onClick="onClick"
+                android:text="@string/tolkien"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                app:backgroundTint="@color/greenPrimaryThemeColor" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/one_subject_btn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="85dp"
+                android:layout_height="46dp"
+                android:layout_above="@+id/two_subject_btn"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginBottom="26dp"
+                android:elevation="4dp"
+                android:fontFamily="serif"
+                android:onClick="onClick"
+                android:tag="subject"
+                android:text="@string/android"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                app:backgroundTint="@color/subjectColor" />
+            <!--(2) TWO'S <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+            <android.support.design.button.MaterialButton
+                android:id="@+id/two_title_btn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="103dp"
+                android:layout_height="46dp"
+                android:layout_above="@+id/three_title_btn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="26dp"
+                android:layout_toEndOf="@+id/two_author_btn"
+                android:elevation="4dp"
+                android:fontFamily="serif"
+                android:onClick="onClick"
+                android:text="@string/the_hobitt"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                app:backgroundTint="@color/titlesOrangeColor" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/two_author_btn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="116dp"
+                android:layout_height="46dp"
+                android:layout_above="@+id/three_author_btn"
+                android:layout_marginStart="21dp"
+                android:layout_marginBottom="26dp"
+                android:layout_toEndOf="@+id/two_subject_btn"
+                android:elevation="4dp"
+                android:fontFamily="serif"
+                android:onClick="onClick"
+                android:text="@string/dan_brown"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                app:backgroundTint="@color/greenPrimaryThemeColor" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/two_subject_btn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="85dp"
+                android:layout_height="46dp"
+                android:layout_above="@+id/three_subject_btn"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginBottom="26dp"
+                android:elevation="4dp"
+                android:fontFamily="serif"
+                android:onClick="onClick"
+                android:text="@string/love_sub"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                app:backgroundTint="@color/subjectColor" />
+            <!-- (3) THREE'S <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/three_title_btn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="110dp"
+                android:layout_height="46dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="31dp"
+                android:layout_toEndOf="@+id/three_author_btn"
+                android:elevation="4dp"
+                android:fontFamily="serif"
+                android:onClick="onClick"
+                android:text="@string/el_quijote"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                app:backgroundTint="@color/titlesOrangeColor" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/three_author_btn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="116dp"
+                android:layout_height="46dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="21dp"
+                android:layout_marginBottom="31dp"
+                android:layout_toEndOf="@+id/three_subject_btn"
+                android:elevation="4dp"
+                android:fontFamily="serif"
+                android:onClick="onClick"
+                android:text="@string/jules_verne"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                app:backgroundTint="@color/greenPrimaryThemeColor" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/three_subject_btn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="85dp"
+                android:layout_height="46dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginBottom="31dp"
+                android:elevation="4dp"
+                android:fontFamily="serif"
+                android:onClick="onClick"
+                android:text="@string/art"
+                android:textAlignment="center"
+                android:textSize="13sp"
+                app:backgroundTint="@color/subjectColor" />
+
+            <Switch
+                android:id="@+id/switch1_subjects"
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="16dp"
+                android:checked="true"
+                android:elevation="4dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="switchController"
+                android:text="@string/subjects"
+                android:textColorLink="@color/greenPrimaryThemeColor"
+                android:textSize="12sp"
+                android:thumbTint="@color/subjectColor" />
+
+            <Switch
+                android:id="@+id/switch2_authors"
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="55dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/greenPrimaryThemeColor"
+                android:buttonTint="@color/greenPrimaryThemeColor"
+                android:checked="true"
+                android:elevation="4dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="switchController"
+                android:text="@string/authors"
+                android:textSize="12sp"
+                android:thumbTint="@color/greenPrimaryThemeColor" />
+
+            <Switch
+                android:id="@+id/switch3_titles"
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="90dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/titlesOrangeColor"
+                android:buttonTint="@color/titlesOrangeColor"
+                android:checked="true"
+                android:elevation="4dp"
+                android:gravity="center|center_horizontal"
+                android:onClick="switchController"
+                android:text="@string/titles"
+                android:textSize="12sp"
+                android:thumbTint="@color/titlesOrangeColor" />
+            <!-- (4) FOUR'S <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+            <!--
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/four_title_btn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/pinocchio" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/four_author_btn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/four_subject_btn"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/one_title_btn"
+                android:gravity="clip_horizontal"
+                android:text="@string/hemingway"
+                app:backgroundTint="#1de9b6" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/four_subject_btn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="114dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/one_author_btn"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="24dp"
+                android:tag="subject"
+                android:text="@string/poetry"
+                app:backgroundTint="#b388ff" /> -->
+            <!--END BTNS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+
+        </RelativeLayout>
+        <!--                         *************************************************************************************************       -->
+
+    </android.support.design.card.MaterialCardView>
+
+
+</android.support.constraint.ConstraintLayout>

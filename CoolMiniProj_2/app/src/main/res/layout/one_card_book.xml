@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view_friend"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="3dp"
+    android:layout_marginLeft="@dimen/mtrl_card_spacing"
+    android:layout_marginTop="@dimen/mtrl_card_spacing"
+    android:layout_marginRight="@dimen/mtrl_card_spacing"
+    android:elevation="8dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="6dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/coverImage"
+            android:layout_width="137dp"
+            android:layout_height="176dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:scaleType="fitXY"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="232dp"
+            android:layout_height="43dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="3dp"
+            android:layout_toEndOf="@+id/coverImage"
+            android:layout_toRightOf="@+id/coverImage"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingRight="3dp"
+            android:singleLine="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            card_view:autoSizeMaxTextSize="22sp"
+            card_view:autoSizeTextType="uniform"
+            card_view:fontFamily="@font/bad_script"
+            android:paddingEnd="3dp"
+            android:layout_marginEnd="3dp" />
+
+        <TextView
+            android:id="@+id/author_tv"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="41dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_toEndOf="@+id/coverImage"
+            android:layout_toRightOf="@+id/coverImage"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingTop="20dp"
+            android:textSize="12sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/first_publish_year_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_alignBaseline="@id/year_label"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginBottom="62dp"
+            android:gravity="center|left"
+            android:lines="1"
+            android:textSize="12sp" />
+
+        <RatingBar
+            android:id="@+id/ratingbar_forcard"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:layout_alignBaseline="@id/divider"
+            android:layout_alignStart="@+id/coverImage"
+            android:layout_alignLeft="@+id/coverImage"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="false"
+            android:layout_marginStart="194dp"
+            android:layout_marginLeft="194dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginRight="-211dp"
+            android:drawingCacheQuality="high"
+            android:elevation="50dp"
+            android:indeterminate="false"
+            android:isIndicator="true"
+            android:isScrollContainer="false"
+            android:numStars="5"
+            android:outlineProvider="background"
+            android:progressTint="@color/starRatingColor"
+            android:scaleX="1.2"
+            android:scaleY="1.2" />
+
+        <TextView
+            android:id="@+id/year_label"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_alignBaseline="@id/coverImage"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginEnd="71dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginBottom="62dp"
+            android:layout_toStartOf="@id/first_publish_year_tv"
+            android:layout_toLeftOf="@id/first_publish_year_tv"
+            android:layout_toEndOf="@+id/coverImage"
+            android:layout_toRightOf="@+id/coverImage"
+            android:gravity="center|left"
+            android:lines="1"
+            android:text="@string/first_publi_year_label"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/action_save_toMyLibrary_CardBtn"
+            android:layout_width="44dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginRight="19dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/empty_heart"
+            android:button="@null"
+            android:contentDescription="TODO"
+            android:textSize="16sp"
+            android:theme="@android:style/Widget.Material.Light.CompoundButton.CheckBox"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/share_card_btn"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="84dp"
+            android:layout_marginRight="84dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="TODO"
+            android:scaleType="fitCenter"
+            card_view:srcCompat="@drawable/share_blue_icon" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="230dp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/author_tv"
+            android:layout_alignBaseline="@id/divider"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@id/coverImage"
+            android:background="?android:attr/listDivider" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="230dp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/author_tv"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@id/coverImage"
+            android:background="?android:attr/listDivider" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

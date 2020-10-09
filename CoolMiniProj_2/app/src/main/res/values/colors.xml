@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0077C2</color>
+    <color name="colorPrimaryDark">#0077c2</color>
+    <color name="colorPrimDark">#0077c2</color>
+    <color name="colorPrimaryLight">#42a5f5</color>
+    <color name="colorPrimarySuperLight">#80d6ff</color>
+
+    <color name="colorSecondary">#80cbc4</color>
+    <color name="colorSecondaryDark">#4f9a94</color>
+    <color name="colorSecondaryLight">#b2fef7</color>
+
+    <color name="colorAccent">#8bc34a</color>
+    <color name="lighterGreen">#8bc34a</color>
+    <color name="greenPrimaryThemeColor">#5a9216</color>
+    <color name="greenDarkerThemeColor">#487512</color>
+
+    <color name="subjectColor">#78909c</color>
+    <color name="sujectDarkColor">#60737d</color>
+    <color name="titlesOrangeColor">#ff7043</color>
+    <color name="deepOrange">#c75b39</color>
+    <color name="starRatingColor">#ffeb3b</color>
+    <color name="authorInsideBkColor">#33691e</color>
+
+</resources>

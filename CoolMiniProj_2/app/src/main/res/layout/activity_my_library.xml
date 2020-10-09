@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_gradient_background"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MyLibraryActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_search_MyLib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="@color/greenPrimaryThemeColor"
+        android:contentDescription="@string/description_new_search"
+        android:elevation="80dp"
+        android:fitsSystemWindows="true"
+        android:padding="0dp"
+        android:scaleType="fitStart"
+        app:borderWidth="0dp"
+        app:maxImageSize="38dp"
+        app:srcCompat="@drawable/binoculars_search_plus_gradient_shadow_yellow"
+        app:useCompatPadding="true" />
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_library"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimaryDark"
+            app:navigationIcon="@drawable/mylibrary_icon"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/my_library_title" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_insideMyLibrary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/numOfSavedBooks"
+                android:layout_width="196dp"
+                android:layout_height="35dp"
+                android:text="TextView"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:id="@+id/deleteAll_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/description_delete_all_list"
+                android:elevation="8dp"
+                android:onClick="deleteAllLibrary"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/delete_trashcan_with_x" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:layout_toStartOf="@+id/deleteAll_btn"
+                android:onClick="refreshLib"
+                android:text="Button" />
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_recycler_view_library"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|fill"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="1dp"
+            android:animateLayoutChanges="false"
+
+            android:baselineAligned="false"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:fitsSystemWindows="false"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_404"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="330dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="4dp"
+            app:srcCompat="@drawable/cute_crying_page_notfound" />
+
+        <TextView
+            android:id="@+id/notfound_404_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="43dp"
+            android:text="@string/notfound_label" />
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/search_btn_if404"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/notfound_404_label"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="149dp"
+            android:elevation="8dp"
+            app:backgroundTint="@color/greenPrimaryThemeColor" />
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
